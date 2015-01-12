@@ -24,19 +24,19 @@ public class CommandFactory {
 			case CLOSE_ANGLE: command = new Next(reinterpreter_);
 				break;
 				
-			case OPEN_BRACKET: command = new StartLoop(reinterpreter_);
+			case OPEN_BRACKET: command = new StartOfLoop(reinterpreter_);
 				break;
 				
-			case CLOSE_BRACKET: command = new FinishLoop(reinterpreter_);
+			case CLOSE_BRACKET: command = new EndOfLoop(reinterpreter_);
 				break;
 				
-			case COMMA: command = new GetMemByte(reinterpreter_);
+			case COMMA: command = new StoreData(reinterpreter_);
 				break;
 				
-			case DOT: command = new PutMemByte(reinterpreter_);	
+			case DOT: command = new OutputData(reinterpreter_);	
 				break;	
 				
-			default: command = new DoNothing(reinterpreter_);
+			default: 
 			 
 		}
 		

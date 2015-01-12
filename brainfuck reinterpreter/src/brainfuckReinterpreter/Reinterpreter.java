@@ -8,14 +8,18 @@ public abstract class Reinterpreter {
 	String         		     input_;
 	char[]		             memory_;
 	int 		             memPtr_;
+	final int 				 memLength_;
+	int 					 currPosInInput_;	
 
 	//	ICommand       command_;
 	CommandFactory commandFactory_;
 	
 	public Reinterpreter(final Language language, final int memSize){
-		language_ = language;
-		memory_   = new char[memSize];
-		memPtr_   = 0;
+		language_  = language;
+		memLength_ = memSize;
+		memory_    = new char[memLength_];
+		memPtr_    = 0;
+		currPosInInput_ = 0;
 	}
 	
 	public abstract void interpret(String input);

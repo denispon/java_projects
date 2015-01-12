@@ -9,14 +9,12 @@ public class BrainfuckReinterpreter extends Reinterpreter {
 
 	@Override
 	public void interpret(String input) {
-		// TODO Auto-generated method stub
 		input_ = input;
 		int inputLength = input.length();
-		int indxInInput = 0;
 		
-		while(indxInInput < inputLength){
+		while(currPosInInput_++ < inputLength){
 			
-			char currChar = input_.charAt(indxInInput);
+			char currChar = input_.charAt(currPosInInput_);
 			ICommand command = commandFactory_.createCommand(language_.getTokenByChar(currChar));
 			command.execute();
 		}
