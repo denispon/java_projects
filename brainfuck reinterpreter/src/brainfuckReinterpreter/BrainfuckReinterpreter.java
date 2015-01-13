@@ -12,7 +12,7 @@ public class BrainfuckReinterpreter extends Reinterpreter {
 		input_ = input;
 		int inputLength = input.length();
 		
-		while(currPosInInput_++ < inputLength){
+		while(currPosInInput_ < inputLength){
 			
 			char currChar = input_.charAt(currPosInInput_);
 			ICommand command = commandFactory_.createCommand(language_.getTokenByChar(currChar));

@@ -16,6 +16,7 @@ public class StoreData extends BrainfuckCommand implements ICommand {
 			//TODO:ask if throw exception declaration influence on overloading
 			e.printStackTrace();
 		}
+		++reinterpreter_.currPosInInput_;
 
 	}
 

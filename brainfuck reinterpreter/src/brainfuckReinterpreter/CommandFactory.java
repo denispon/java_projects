@@ -36,7 +36,7 @@ public class CommandFactory {
 			case DOT: command = new OutputData(reinterpreter_);	
 				break;	
 				
-			default: 
+			default: command = new DoNothing(reinterpreter_);
 			 
 		}
 		

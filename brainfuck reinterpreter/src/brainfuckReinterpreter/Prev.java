@@ -11,6 +11,7 @@ public class Prev extends BrainfuckCommand implements ICommand {
 		if(--reinterpreter_.memPtr_ < 0 ){
 			throw new  ArrayIndexOutOfBoundsException(reinterpreter_.memPtr_);
 		}
+		++reinterpreter_.currPosInInput_;
 
 	}
 

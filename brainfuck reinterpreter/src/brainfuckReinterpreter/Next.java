@@ -11,6 +11,7 @@ public class Next extends BrainfuckCommand implements ICommand {
 		if(++reinterpreter_.memPtr_ > reinterpreter_.memLength_ ){
 			throw new  ArrayIndexOutOfBoundsException(reinterpreter_.memPtr_);
 		}
+		++reinterpreter_.currPosInInput_;
 
 	}
 

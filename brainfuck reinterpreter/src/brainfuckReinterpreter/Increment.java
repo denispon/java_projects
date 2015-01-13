@@ -9,6 +9,7 @@ public class Increment extends BrainfuckCommand implements ICommand{
 	@Override
 	public void execute() {
 		++(reinterpreter_.memory_[reinterpreter_.memPtr_]);
+		++reinterpreter_.currPosInInput_;
 		
 	}
 
