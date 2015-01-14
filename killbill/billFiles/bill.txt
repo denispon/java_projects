@@ -1,0 +1,3 @@
+blue ice cubes 		: 10 : 1.5 : USD
+red ice cubes  		: 30 : 4   : RUB
+yellow ice cubes  	: 2  : 8   : GBR
