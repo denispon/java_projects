@@ -18,9 +18,11 @@ public enum Currency {
 	
 	public static Currency getCurrencyByName(final String currencyName){
 		
+		String locCurrencyName = currencyName.trim();
+		
 		for(Currency curr : Currency.values()){
 			
-			if(currencyName.compareTo(curr.getCurrencyName()) == 0){
+			if(locCurrencyName.compareTo(curr.getCurrencyName().trim()) == 0){
 				return curr;
 			}
 		}

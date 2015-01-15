@@ -1,6 +1,7 @@
 package report;
 
 import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
@@ -29,17 +30,15 @@ public abstract class Report {
 	}
 	
 	public void writeReportToFile() throws IOException{
-		
-		BufferedWriter writer = null;
-		Path reportPath_     = Paths.get(reportDir_, reportName_);
-		Charset charset = Charset.forName("US-ASCII");
-		
-		writer = Files.newBufferedWriter(reportPath_, charset);
+				
+		BufferedWriter writer = new BufferedWriter(new FileWriter(reportDir_+"/"+ reportName_));
 		
 		for(String s: records_){
-			writer.write(s, 0, s.length());
+			writer.write(s);
 			writer.newLine();
 		}
+		
+		writer.close();
 	}
 	
 	abstract public void display();

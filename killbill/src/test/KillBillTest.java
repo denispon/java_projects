@@ -1,6 +1,9 @@
 package test;
 
 import static org.junit.Assert.*;
+
+import java.io.IOException;
+
 import killbill.KillBillProgram;
 
 import org.junit.BeforeClass;
@@ -20,8 +23,15 @@ public class KillBillTest {
 		
 		KillBillProgram killbill = new KillBillProgram();
 		Report report = killbill.getReport("billFiles/bill.txt", 
-				  "ratesFiles/rates.txt", Currency.RUB);
+				  "ratesFiles/rates.txt", Currency.RUB, "the_report.txt");
 		report.display();
+		
+		try {
+			report.writeReportToFile();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }

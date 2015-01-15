@@ -12,6 +12,6 @@ public class KillBillReport extends Report {
 		for(String s : records_){
 			System.out.println(s);
 		}
-
 	}
+	
 }

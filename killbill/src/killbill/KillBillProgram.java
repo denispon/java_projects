@@ -24,13 +24,13 @@ public class KillBillProgram {
 	ICalculator			        calculator_;
 	
 
-	public Report getReport(final String rawReportPath, final String ratesPath, final Currency reqCurrency){
+	public Report getReport(final String rawReportPath, final String ratesPath,
+			final Currency reqCurrency, final String reportName					){
 		
 		init(rawReportPath, ratesPath, reqCurrency);
 		billParser_.parseBill(rawReportPath, records_);
 		calculateTotalPrice();
-		return null;
-		
+		return reportCreator_.createReport(records_, reportName);
 	}
 
 	private void init(final String rawReportPath, final String ratesPath, final Currency reqCurrency){
