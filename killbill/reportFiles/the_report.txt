@@ -1,0 +1,3 @@
+Record [description_=blue ice cubes 		, currency_=USD, totalPrice_=450.0]
+Record [description_=red ice cubes  		, currency_=RUB, totalPrice_=120.0]
+Record [description_=yellow ice cubes  	, currency_=GBR, totalPrice_=240.0]
